@@ -32,7 +32,7 @@ public class ProdutoServiceImpl implements ProdutoService {
 
     @Override
     public List<Produto> buscarTodosProdutos() {
-        return produtoRepository.findAll();
+        return produtoRepository.findAllByQuantidadeIsGreaterThan(0);
     }
 
     @Override
