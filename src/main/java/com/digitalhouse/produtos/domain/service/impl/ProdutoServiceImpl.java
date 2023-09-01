@@ -27,7 +27,7 @@ public class ProdutoServiceImpl implements ProdutoService {
 
     @Override
     public Optional<Produto> buscarPorId(Integer id) {
-        return produtoRepository.findById(id);
+        return produtoRepository.findByIdAndQuantidadeGreaterThan(id, 0);
     }
 
     @Override
