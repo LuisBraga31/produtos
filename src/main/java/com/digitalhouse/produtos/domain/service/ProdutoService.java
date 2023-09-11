@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface ProdutoService {
 
-    Produto criarProduto (Produto produto);
+    List<Produto> criarProduto (List<Produto> produtos);
     Optional<Produto> buscarPorId(Integer id);
     List<Produto> buscarTodosProdutos();
     void excluirProduto(Integer id);

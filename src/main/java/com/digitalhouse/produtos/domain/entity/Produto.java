@@ -20,5 +20,5 @@ public class Produto {
     private Integer quantidade;
     @Column(length = 80)
     private String descricao;
-
+    
 }

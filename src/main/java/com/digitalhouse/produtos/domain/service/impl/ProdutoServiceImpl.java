@@ -20,9 +20,10 @@ public class ProdutoServiceImpl implements ProdutoService {
         this.produtoRepository = produtoRepository;
     }
 
+
     @Override
-    public Produto criarProduto(Produto produto) {
-        return produtoRepository.save(produto);
+    public List<Produto> criarProduto(List<Produto> produtos) {
+        return produtoRepository.saveAll(produtos);
     }
 
     @Override

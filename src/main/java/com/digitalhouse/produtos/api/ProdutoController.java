@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("produtos")
@@ -31,8 +30,8 @@ public class ProdutoController {
     }
 
     @PostMapping
-    ResponseEntity<Produto> criarProduto(@RequestBody Produto produto) {
-        return ResponseEntity.ok(produtoService.criarProduto(produto));
+    ResponseEntity<List<Produto>> criarProduto(@RequestBody List<Produto> produtos) {
+        return ResponseEntity.ok(produtoService.criarProduto(produtos));
     }
 
     @DeleteMapping("{id}")
